@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
-        <meta name="description" content="">
+        <meta name="description" content="A calorie tracking app">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+    <div class="wrapper">
         <h1>Calorie Tracker</h1>
         <form class="calories">
             <label for="calories">Target Calories</label>
             <input id="calories" type="number" name="calories">
             <button>Set</button>
         </form>
-
+        <br>
         <h3>Calories so far</h3>
         <form class="add">
             <label for="consume">What did you consume?</label>
-            <input id="consume" type="text">
+            <input id="consume" type="text"><br>
             <label for="amount">How many calories did it have?</label>
             <input id="amount" type="number" name="amount">
             <button>Add</button>
@@ -35,5 +32,6 @@
         <h4>Calories available:</h4>
         <p id="available"></p>
         <script src="index.js" async defer></script>
+    </div>
     </body>
 </html>
