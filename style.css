@@ -24,6 +24,24 @@ label, p {
     color: #d4d4d4;
 }
 
+button {
+    border-radius: 5px;
+    background-color: #1d222b;
+    padding: 10px;
+    align-items: center;
+    border: none;
+    color: white;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    justify-content: space-between;
+    margin-left: 4px;
+}
+
+button:hover {
+    color:#d4d4d4;
+    cursor: pointer;
+}
+
 .wrapper {
     width: 850px;
     gap: 70px;
