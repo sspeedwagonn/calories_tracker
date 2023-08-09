@@ -1,7 +1,5 @@
-const targetCalories = document.getElementById("calories");
-const consumedCalories = document.getElementById("consume");
-const amountOfCalories = document.getElementById("amount");
 const currentCalories = document.getElementById("current");
+const caloriesAvailable = document.getElementById("available");
 
 currentCalories.innerHTML = 0;
 
@@ -11,14 +9,31 @@ form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     let formdata = new FormData(this);
-    let input = parseFloat(formdata.get("amount")); // Parse input to a number
+    let input = parseFloat(formdata.get("amount"));
 
-    let currentCaloriesValue = parseFloat(currentCalories.innerHTML); // Parse existing value
+    let currentCaloriesValue = parseFloat(currentCalories.innerHTML);
 
-    if (!isNaN(input)) { // Make sure input is a valid number
+    if (!isNaN(input)) {
         let newCalories = currentCaloriesValue + input;
-        currentCalories.innerHTML = newCalories.toFixed(2).replace(/\.00$/, ""); // Update with the sum
+        currentCalories.innerHTML = newCalories.toFixed(2).replace(/\.00$/, "");
     }
 
-    this.reset(); // Reset the form
+    this.reset();
 });
+
+let calForm = document.querySelector(".calories");
+
+calForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let availForm = new FormData(this);
+    let availInput = parseFloat(availForm.get("calories"));
+
+    if (!isNaN(availInput)) {
+        let availCalData = availInput;
+        caloriesAvailable.innerHTML = availInput.toFixed(2).replace(/\.00$/, "");
+    }
+
+    this.reset();
+});
+
