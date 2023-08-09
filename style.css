@@ -16,6 +16,14 @@ body {
     background: #1d222b;
 }
 
+h1, h3, h4 {
+    color: white;
+}
+
+label, p {
+    color: #d4d4d4;
+}
+
 .wrapper {
     width: 850px;
     gap: 70px;
